@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Card Design - HTML CSS for Biggner</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="headphone-cards">
+      <div class="container owl-carousel">
+        <div class="product-card">
+          <img src="./images/gray.png" alt="Gray Headphone" />
+          <h3>Edifier W830NB Bluetooth</h3>
+          <p class="price">$57</p>
+          <button>Add to Cart</button>
+        </div>
+
+        
+        <div class="product-card offwhite">
+          <img src="./images/offwhite.png" alt="Gray Headphone" />
+          <h3>UGREEN HiTune Max5c HP202</h3>
+          <p class="price">$59</p>
+          <button>Add to Cart</button>
+        </div>
+
+        
+        <div class="product-card green">
+          <img src="./images/green.png" alt="Gray Headphone" />
+          <h3>Edifier W820NB Plus Green</h3>
+          <p class="price">$77</p>
+          <button>Add to Cart</button>
+        </div>
+
+        
+        <div class="product-card white">
+          <img src="./images/white.png" alt="Gray Headphone" />
+          <h3>JBL Tune 720BT White Wireless</h3>
+          <p class="price">$97</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    nav: true,
+    margin: 100,    // Adds space between the cards
+    items: 2,      // Shows 3 cards at once instead of 1 giant one
+    responsive: {  // Best practice: make it change based on screen size
+      0: { items: 1 },
+      600: { items: 2 },
+      1000: { items: 3 }
+    }
+  });
+});
+    </script>
+  </body>
+</html>
