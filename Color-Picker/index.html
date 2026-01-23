@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker - Basic HTML CSC JS</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Color Picker</h1>
+    </div>
+
+    <div class="colorPlate">
+        <div>
+            <input type="range" name="red" id="red" min="0" max="255">
+            <span>Red</span>
+        </div>
+        <div>
+            <input type="range" name="green" id="green" min="0" max="255">
+            <span>Green</span>
+        </div>
+        <div>
+            <input type="range" name="blue" id="blue" min="0" max="255">
+            <span>Blue</span>
+        </div>
+    </div>
+
+    <script>
+        const updatedColor = () => {
+            const red = document.getElementById("red").value;
+            const green = document.getElementById("green").value;
+            const blue = document.getElementById("blue").value;
+
+            document.querySelector("body").style.background = `rgb(${red}, ${green}, ${blue})`
+        }
+
+        document.querySelectorAll("input").forEach(input => {
+            input.addEventListener("input", updatedColor);
+        })
+
+        updatedColor();
+
+    </script>
+</body>
+</html>
