@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Original+Surfer&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(21, 6, 37),rgb(24, 24, 116), rgb(49, 49, 143), rgb(24, 24, 116), rgb(23, 18, 44));
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.passwordGenerator{
+    min-width: 320px;
+    min-height: 380px;
+    background-color: rgba(0, 0, 0, 0.349);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.passwordGenerator h2{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.passwordGenerator input{
+    padding: .8rem 1em;
+    box-shadow: inherit;
+    font-family: "Original Surfer", sans-serif;
+    font-size: 1.2rem;
+}
+
+.passwordGenerator btn{
+    display: flex;
+    gap: 1rem;
+}
+
+.passwordGenerator button{
+    background-color: rgba(24, 24, 116, 0.212);
+    color: #fff;
+    border: 2px solid;
+    border-radius: 23px;
+    padding: .6rem 2.8rem;
+    font-family: "Original Surfer", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
