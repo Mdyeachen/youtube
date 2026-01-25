@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom left, rgb(1, 71, 114), hsla(190,100%,20%,1), hsla(190,100%,20%,1));
+}
+
+.login{
+    background-color: rgb(0, 14, 31);
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.349);
+    color: #fff;
+    min-width: 280px;
+    min-height: 320px;
+    text-align: center;
+}
+
+.login form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login h1{
+    margin-bottom: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.login form label{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    font-weight: 300;
+    position: relative;
+    padding-top: 1rem;
+}
+
+.login form label span{
+    position: absolute;
+    top: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.login form label:has(input:focus) span,
+.login form label:has(input:not(:placeholder-shown)) span{
+    color: #04d9ff;
+    top: 0;
+}
+
+.login form label input{
+    background-color: transparent;
+    color: #fff;
+    padding: .6rem 1.2rem;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.507);
+    outline: none;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(0, 31, 70);
+    box-shadow: 0 10px 20px rgba(54, 54, 54, 0.24);
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.submit-btn::before{
+    position: absolute;
+    content: "";
+    inset: -1000px;
+    background-image: conic-gradient(
+        transparent,
+        transparent,
+        transparent,
+        #00efff
+    );
+    animation: rotate 3s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.submit-btn::after{
+    position: absolute;
+    content: "";
+    inset: 2px;
+    background-color: rgb(0, 14, 31);
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.submit-btn:hover,
+.submit-btn:active  {
+    background: linear-gradient(45deg, #04d9ff, #0072ff);
+    box-shadow: 0 0 20px rgba(4, 217, 255, 0.6), 0 0 40px rgba(4, 217, 255, 0.4);
+}
+
+.submit-btn span{
+    position: relative;
+    z-index: 1;
+}
