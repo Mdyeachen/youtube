@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #213d49;
+  background-image:
+    radial-gradient(circle at 0% 5%, #13222a 20%, transparent 20.5%),
+    radial-gradient(circle at 100% 100%, #13222a 20%, transparent 20.5%);
+  color: #fff;
+}
+
+.todo-card {
+  min-width: 380px;
+  min-height: 480px;
+  background-color: #152025;
+  box-shadow: 0 5px 15px #152025;
+  border-radius: 24px;
+  padding: 3rem;
+}
+
+.todo-card h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.todo-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.todo-input input {
+  border: none;
+  color: #fff;
+  background-color: #3a4348;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  min-width: 280px;
+  outline: none;
+}
+
+.todo-input button {
+  background-color: #fff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.todoSingle-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 2rem;
+  background-color: #3a4348;
+  margin: 1rem 0;
+  border-radius: 24px;
+  font-weight: 300;
+}
+
+.todoSingle-list.completed h3 {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
