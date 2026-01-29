@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #8c2cdf, #370f7a);
+}
+
+.loginForm{
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 3rem;
+}
+
+.loginForm header{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.loginForm header img{
+    width: 60px;
+    text-align: center;
+}
+
+.loginForm header h2{
+  font-size: 3rem;
+}
+
+.loginForm header p{
+  color: gray;
+  margin-bottom: 2rem;
+}
+
+.loginForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.loginForm label{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  span{
+    color: #370f7a;
+  }
+}
+
+.loginForm input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #370f7a;
+  outline: none;
+  padding: .2rem .5rem;
+}
+
+.loginForm form button{
+  color: #fff;
+  background-color: #370f7a;
+  background-image: linear-gradient(to bottom, #8c2cdf, #370f7a);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 24px;
+  font-weight: 500;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.34);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.login-with {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-between;
+  gap: 1rem;
+
+  .single-login{
+    background-color: rgb(203, 203, 203);
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+
+    &:hover{
+      color: #370f7a;
+    }
+  }
+}
+
+.other-login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0 .5rem;
+  font-size: 1.4rem;
+}
