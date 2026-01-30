@@ -1,0 +1,169 @@
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-accent: #9868a9;
+  --bg-dark: #232323;
+  --text-muted: #b0b0b0;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f0f0; /* Contrast for the footer cards */
+}
+
+/* Reusable Utilities */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+li{list-style: none;}
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.flex-between { justify-content: space-between; }
+.align-center { align-items: center; }
+
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+footer h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary-accent);
+  margin-bottom: 1.2rem;
+}
+
+/* Content Area */
+.footer-content {
+  max-width: 400px;
+}
+
+.footer-content h3 {
+  font-size: 1.5rem; /* Larger for the main call to action */
+  text-transform: none;
+  letter-spacing: normal;
+  color: #fff;
+}
+
+.footer-content p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-content a {
+  font-weight: 600;
+  color: var(--primary-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-content a:hover {
+  gap: 12px; /* Smooth arrow slide effect */
+}
+
+
+.footer-menu ul li {
+  list-style: none;
+  margin-bottom: 0.8rem;
+}
+
+.footer-menu ul li a {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-menu ul li a:hover {
+  color: var(--primary-accent);
+  padding-left: 4px;
+}
+
+/* Horizontal Line */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.copyright p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+
+.social i {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.social i:hover {
+  opacity: 1;
+  color: var(--primary-accent);
+  transform: translateY(-3px);
+}
+
+
+/* Footer Main Styles */
+footer {
+  background-color: var(--bg-dark);
+  color: #fff;
+  border-radius: 20px;
+  margin: 2rem;
+  padding: 3rem 2rem 1.5rem; /* More top padding */
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+/* Menus */
+.footer-menu {
+  gap: 4rem;
+}
+/* Bottom Section */
+.footer-bottom {
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.social ul {
+  gap: 1.2rem;
+}
+
+/* --- Responsive Perfection --- */
+
+@media (max-width: 500px) {
+  footer {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .social ul {
+    justify-content: center;
+  }
+
+}
